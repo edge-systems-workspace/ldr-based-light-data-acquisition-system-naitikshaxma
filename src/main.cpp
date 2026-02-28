@@ -10,15 +10,18 @@
 int ldrValue = 0;
 
 void setup() {
-
-    // TODO 3:
-    // Initialize Serial communication (9600 baud rate)
     Serial.begin(9600);
-
-    // TODO 4:
-    // Print system initialization message
     Serial.println("LDR Light Monitoring System Initialized...");
 }
 
 void loop() {
+
+    // TODO 5:
+    // Read analog value from LDR
+    ldrValue = analogRead(LDR_PIN);
+
+    // TODO 6:
+    // Print raw ADC value
+    Serial.print("LDR Value: ");
+    Serial.println(ldrValue);
 }
